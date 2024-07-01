@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-wrapper">
+            <img class="logo" alt="revou-logo" src="images/logo.svg"/>
+            <nav>
+                <ul>
+                    <li><a href="#home">Homes</a></li>
+                    <li><a href="#myprofile">My Profile</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#messageus">Message Us</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Homes</h2>
+            <h1>Hi <span id="nama"></span>, Welcome To Website</h1>
+            <p>Ini adalah website latihan pertama saya</p>
+        </div>
+        <div>
+        <img
+          class="img-slideshow"
+          src="images/banner1.jpg"
+        />
+        <img
+          class="img-slideshow"
+          src="images/banner2.jpg"
+        />
+        <img
+          class="img-slideshow"
+          src="images/banner3.jpeg"
+        />
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
+        </div>
+    </section>
+
+    <section id="myprofile">
+        <div class="container">
+            <h2>My Profile</h2>
+            <div class="myprofile-img">
+                <img src="images/virly.jpeg" alt="Your Name">
+            </div>
+            <div class="myprofile-info">
+                <h2>My Name is Virly Erasthi</h2>
+                <p><strong>Place of Birth:</strong> Jakarta </p>
+                <p><strong>Date of Birth:</strong> 31/01/1999 </p>
+                <p><strong>Occupation:</strong> Sivil Servants </p>
+                <p><strong>About Me:</strong> Software Developer wannabe </p>
+            </div>
+        </div>
+    </section>
+
+      <!-- Section Portfolio -->
+      <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+        <div class="portfolio-gallery">
+          <div>
+            <img src="images/project1.jpg" alt="Project 1" />
+            <h3>Project 1</h3>
+          </div>
+          <div>
+            <img src="images/project2.png" alt="Project 2" />
+            <h3>Project 2</h3>
+          </div>
+          <div>
+            <img src="images/project3.jpg" alt="Project 3" />
+            <h3>Project 3</h3>
+          </div>
+        </div>
+    </div>
+      </section>
+      <hr />
+
+    <section id="messageus">
+        <div class="container">
+            <h2>Message Us</h2>
+            <form name="message-form" onsubmit="return validateForm()">
+            Nama: <input placeholder="Nama" type="text" name="full-name" />
+            <br />
+
+            Tanggal Lahir:
+            <input type="date" name="birth-date" />
+            <br />
+
+            Jenis Kelamin:
+            <input type="radio" id="male" name="gender" value="Laki-laki" />
+            <label for="male">Laki-laki</label>
+            <input type="radio" id="female" name="gender" value="Perempuan" />
+            <label for="female">Perempuan</label>
+            <br />
+
+            Pesan:
+            <textarea placeholder="Pesan" name="messages"></textarea>
+            <br />
+
+            <button type="submit">Submit</button>
+        </div>
+        <div class="container">
+            <div class="message-form">
+            <p>Nama: <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+            <p>Pesan: <span id="sender-messages"></span></p>
+            </div>
+        </div>
+
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
